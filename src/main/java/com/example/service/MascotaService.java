@@ -13,4 +13,5 @@ public interface MascotaService {
     Mascota eliminarMascota(int id);
     Mascota altaMascota(Mascota m);
     Mascota modificarMascota(Mascota m);   
+
 }

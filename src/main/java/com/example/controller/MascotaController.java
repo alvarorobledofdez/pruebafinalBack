@@ -34,6 +34,11 @@ public class MascotaController {
         return service.listadoMascotaUnica(id);
     }
     
+    @GetMapping({"/mascotas/tipo/{tipo}"})
+    public List<Mascota> listarTipo(@PathVariable("tipo") String tipo){
+        return service.listadoMascotasTipo(tipo);
+    }
+    
     @PostMapping("/mascotas")
     public Mascota agregar(@RequestBody Mascota m){
        return service.altaMascota(m); 

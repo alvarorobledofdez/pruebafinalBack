@@ -9,7 +9,7 @@ public interface MascotaRepository extends Repository<Mascota, Integer>{
     
     List<Mascota>findAll();
     Mascota findById(int id);
-    Mascota findById(String tipo);
+    List<Mascota> findByTipo(String tipo);
     Mascota save(Mascota m);
     void delete(Mascota m);
 }

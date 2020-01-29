@@ -27,6 +27,8 @@ public class Usuario {
     private String username;
     @Column
     private String contrasena;
+    @Column
+    private int rol;
 
     public int getId() {
         return id;
@@ -74,6 +76,14 @@ public class Usuario {
 
     public void setPassword(String contrasena) {
         this.contrasena = contrasena;
+    }
+
+    public int getRol() {
+        return rol;
+    }
+
+    public void setRol(int rol) {
+        this.rol = rol;
     }
     
     

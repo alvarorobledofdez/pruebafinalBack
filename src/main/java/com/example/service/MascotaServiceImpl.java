@@ -20,7 +20,7 @@ public class MascotaServiceImpl implements MascotaService{
     
     @Override
     public List<Mascota> listadoMascotasTipo(String tipo){
-        return (List<Mascota>) repositorio.findById(tipo);
+        return repositorio.findByTipo(tipo);
     }
 
     @Override
