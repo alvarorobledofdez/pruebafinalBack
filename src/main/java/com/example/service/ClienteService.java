@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface ClienteService {
     List<Cliente>listadoClientes();
+    
     Cliente clienteUnico(int id);
     Cliente clienteDni(String dni);
     Cliente altaCliente(Cliente c);

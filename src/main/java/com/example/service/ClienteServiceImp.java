@@ -1,4 +1,3 @@
-
 package com.example.service;
 
 import com.example.dao.ClienteRepository;
@@ -8,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ClienteServiceImp implements ClienteService{
-    
+public class ClienteServiceImp implements ClienteService {
+
     @Autowired
     private ClienteRepository repositorio;
-    
+
     @Override
     public List<Cliente> listadoClientes() {
         return repositorio.findAll();
@@ -22,10 +21,10 @@ public class ClienteServiceImp implements ClienteService{
     public Cliente clienteUnico(int id) {
         return repositorio.findById(id);
     }
-    
+
     @Override
-    public Cliente clienteDni(String dni){
-        return repositorio.findById(dni);
+    public Cliente clienteDni(String dni) {
+        return repositorio.findByDni(dni);
     }
 
     @Override
@@ -41,10 +40,9 @@ public class ClienteServiceImp implements ClienteService{
     @Override
     public Cliente eliminarCliente(int id) {
         Cliente c = repositorio.findById(id);
-        if (c!=null)
-        {
-           repositorio.delete(c);
+        if (c != null) {
+            repositorio.delete(c);
         }
-        return c; 
+        return c;
     }
 }

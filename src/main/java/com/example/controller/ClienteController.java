@@ -37,6 +37,11 @@ public class ClienteController {
     public Cliente listarId(@PathVariable("id") int id) {
         return service.clienteUnico(id);
     }
+    
+    @GetMapping({"/clientes/dni/{dni}"})
+    public Cliente clienteDni(@PathVariable("dni") String dni) {
+        return service.clienteDni(dni);
+    }
 
     @PutMapping(path = {"/clientes/{id}"})
     public Cliente editar(@RequestBody Cliente c, @PathVariable("id") int id) {

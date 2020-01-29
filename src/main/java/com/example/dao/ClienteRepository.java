@@ -8,6 +8,7 @@ import org.springframework.data.repository.Repository;
 public interface ClienteRepository extends Repository<Cliente, Integer>{
     List<Cliente>findAll();
     Cliente findById(int id);
+    Cliente findByDni(String dni);
     Cliente findById(String dni);
     Cliente save(Cliente c);
     void delete(Cliente c);
