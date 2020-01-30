@@ -35,6 +35,11 @@ public class UsuarioController {
         return service.listadoUsuarioUnico(id);
     }
     
+    @GetMapping({"/usuarios/username/{username}"})
+    public Usuario listarUsername(@PathVariable("username") String username){
+        return service.listadoUsuarioUsername(username);
+    }
+    
     @PostMapping("/usuarios")
     public Usuario agregar(@RequestBody Usuario u){
        return service.altaUsuario(u); 

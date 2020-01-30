@@ -22,6 +22,11 @@ public class UsuarioServiceImp implements UsuarioService{
     public Usuario listadoUsuarioUnico(int id) {
         return repositorio.findById(id);
     }
+    
+    @Override
+    public Usuario listadoUsuarioUsername(String username) {
+        return repositorio.findByUsername(username);
+    }
 
     @Override
     public Usuario altaUsuario(Usuario u) {
